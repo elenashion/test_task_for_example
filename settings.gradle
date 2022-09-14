@@ -1,0 +1,5 @@
+rootProject.name = 'testovoe_pervoe'
+include 'first_service'
+include 'second_service'
+include 'third_srvice'
+
