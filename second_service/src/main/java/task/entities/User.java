@@ -13,11 +13,6 @@ import javax.persistence.*;
 @Table(name = "users", schema = "crud")
 public class User extends IntBaseEntity
 {
-//    @Getter
-//    @Setter
-//    @Column(name = "name", nullable = false)
-//    private String name;
-
     @Getter
     @Setter
     @Column(name = "state", nullable = false)
@@ -38,7 +33,7 @@ public class User extends IntBaseEntity
     @Override
     public String toString()
     {
-        return "User: [id=" + getId() /*+ ", name=" + getName()*/ + ", state=" + getState() +
+        return "[id=" + getId() + ", state=" + getState() +
                 ", timeOfLastActivity=" + getTimeOfLastActivity() + "]";
     }
 

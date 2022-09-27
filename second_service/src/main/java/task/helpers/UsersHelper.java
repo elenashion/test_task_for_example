@@ -74,6 +74,10 @@ public class UsersHelper extends AbstractHelper<User>
         {
             synchronized (user)
             {
+                if (UserState.ARCHIVED.equals(user.getState()) && isActive)
+                {
+                    return null;
+                }
                 if (isActive)
                 {
                     user.setTimeOfLastActivity(activityTime);

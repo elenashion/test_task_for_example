@@ -55,6 +55,10 @@ public class MessagesHelper extends AbstractHelper<Message>
         }
         Instant createTime = Instant.now();
         User user = usersHelper.changeUserActivity(true, userId, createTime);
+        if (user == null)
+        {
+            return;
+        }
         Message newMessage = new Message(user, message, createTime);
         messageRepository.save(newMessage);
     }

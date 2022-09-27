@@ -5,7 +5,7 @@ import task.helpers.UsersHelper;
 
 public class MessagesService
 {
-    private MessagesHelper messagesHelper;
+    private final MessagesHelper messagesHelper;
 
     public MessagesService(MessagesHelper messagesHelper)
     {

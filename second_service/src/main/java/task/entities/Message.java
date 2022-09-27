@@ -37,7 +37,7 @@ public class Message extends IntBaseEntity
     @Override
     public String toString()
     {
-        return "Message: [id=" + getId() + ", userId=" + getUser().getId() + ", createTime=" + getCreateTime() +
+        return "[id=" + getId() + ", userId=" + getUser().getId() + ", createTime=" + getCreateTime() +
                 "message=" + getMessage().substring(0, 99) + "]";
     }
 }
